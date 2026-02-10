@@ -8,14 +8,14 @@
 -- Isso garante que o DW suporte tanto dados históricos quanto metas futuras.
 INSERT INTO data_warehouse.dim_tempo(id_tempo, data, ano, mes, dia, trimestre, dia_semana, mes_extenso)
 SELECT
-    CAST(TO_CHAR(dt, 'YYYYMMDD') AS INT) AS id_tempo, -- Surrogate Key inteligente baseada na data
+    row_number() OVER (ORDER BY dt) AS id_tempo,
     dt as data,
     EXTRACT(YEAR FROM dt) AS ano,
     EXTRACT(MONTH FROM dt) AS mes,
     EXTRACT(DAY FROM dt) AS dia,
     EXTRACT(QUARTER FROM dt) AS trimestre,
-    TO_CHAR(dt, 'TMDay') AS dia_semana, -- 'TM' traduz para o idioma do servidor (ex: Português)
-    TO_CHAR(dt, 'TMMonth') AS mes_extenso
+    TO_CHAR(dt, 'Day') AS dia_semana,
+    TO_CHAR(dt, 'Month') AS mes_extenso
 FROM
     generate_series(CURRENT_DATE - INTERVAL '30 years',
                     CURRENT_DATE + INTERVAL '5 years', INTERVAL '1 day') AS dt;
