@@ -48,3 +48,11 @@ A peça central que armazena as métricas quantitativas e chaves estrangeiras.
 
 ---
 
+## 🚀 Como Executar o Projeto
+
+1. Clone o repositório.
+2. Certifique-se de ter o banco de dados `base_projeto_vendas.sql` original instalado.
+3. Execute os scripts na pasta `/sql` seguindo a ordem numérica:
+   - `01_schema_setup.sql` (Cria a estrutura)
+   - `02_populate_dims.sql` (Popula dimensões)
+   - `03_load_fact.sql` (Processa e carrega a fato)
