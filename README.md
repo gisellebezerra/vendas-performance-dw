@@ -11,6 +11,11 @@ O propósito foi migrar dados de um sistema operacional (OLTP) para um ambiente 
 * **Produtividade:** Ranking de funcionários por volume financeiro gerado.
 * **Sazonalidade:** Tendências de vendas através de uma dimensão de tempo dedicada.
 
+## 🧩 Modelo Lógico (Star Schema)
+Abaixo, a representação visual das tabelas e seus relacionamentos:
+
+![Modelo Lógico do DW](images/modelo_logico_dw_venda.png)
+
 ## 🏗️ Arquitetura do Data Warehouse
 A modelagem seguiu a metodologia **Star Schema** (Modelo Estrela), garantindo simplicidade para o usuário final e alta performance em consultas analíticas.
 
