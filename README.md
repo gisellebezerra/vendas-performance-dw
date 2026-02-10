@@ -25,7 +25,6 @@ A peça central que armazena as métricas quantitativas e chaves estrangeiras.
 * **`dim_territorio`**: Estrutura geográfica baseada nos dados de envio.
 * **`dim_tempo`**: Dimensão inteligente gerada via SQL para análises temporais completas (Trimestre, Mês, Dia da Semana).
 
-
 ## 🛠️ Destaques Técnicos e Engenharia
 * **Precisão Financeira:** Uso do tipo `NUMERIC(18,2)` para garantir cálculos exatos, evitando os erros de precisão comuns do tipo `FLOAT`.
 * **Transformação via SQL (ETL):** Todo o processo de limpeza e carga foi realizado com comandos `INSERT INTO ... SELECT` e `INNER JOINs`, transformando chaves naturais em chaves substitutas (surrogate keys).
@@ -40,6 +39,7 @@ A peça central que armazena as métricas quantitativas e chaves estrangeiras.
 * `sql/01_schema_setup.sql`: Criação das tabelas e schemas.
 * `sql/02_populate_dims.sql`: Scripts de carga das dimensões.
 * `sql/03_load_fact.sql`: Lógica de transformação e carga da tabela fato.
+* `sql/04_analises_exploratorias.sql`:Análises exploratórias.
 
 ---
 
