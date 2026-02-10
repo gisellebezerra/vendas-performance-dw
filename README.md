@@ -39,12 +39,14 @@ A peça central que armazena as métricas quantitativas e chaves estrangeiras.
 * **PostgreSQL:** SGBD para hospedagem do Data Warehouse.
 * **SQL:** DDL e DML para estruturação e transformação dos dados.
 * **Modelagem Dimensional:** Padrões de projeto Star Schema.
+* **Business Intelligence & Analytics (Power BI):** A camada de visualização foi conectada diretamente ao Data Warehouse para transformar as tabelas dimensionais em insights estratégicos. O foco do dashboard foi a lucratividade e o controle de erosão de margem.
 
 ## 📂 Estrutura de Arquivos
 * `sql/01_schema_setup.sql`: Criação das tabelas e schemas.
 * `sql/02_populate_dims.sql`: Scripts de carga das dimensões.
 * `sql/03_load_fact.sql`: Lógica de transformação e carga da tabela fato.
 * `sql/04_analises_exploratorias.sql`:Análises exploratórias.
+* `sql/04_analises_exploratorias.sql`:Dashboard.
 
 ## 🛠️ Como Reproduzir este Data Warehouse
 
