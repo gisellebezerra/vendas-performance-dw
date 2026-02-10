@@ -46,13 +46,13 @@ A peça central que armazena as métricas quantitativas e chaves estrangeiras.
 * `sql/03_load_fact.sql`: Lógica de transformação e carga da tabela fato.
 * `sql/04_analises_exploratorias.sql`:Análises exploratórias.
 
----
+## 🛠️ Como Reproduzir este Data Warehouse
 
-## 🚀 Como Executar o Projeto
+Para configurar este ambiente localmente, siga os passos abaixo:
 
-1. Clone o repositório.
-2. Certifique-se de ter o banco de dados `base_projeto_vendas.sql` original instalado.
-3. Execute os scripts na pasta `/sql` seguindo a ordem numérica:
-   - `01_schema_setup.sql` (Cria a estrutura)
-   - `02_populate_dims.sql` (Popula dimensões)
-   - `03_load_fact.sql` (Processa e carrega a fato)
+1. **Pré-requisitos:** Ter o PostgreSQL instalado e a base de dados original `base_projeto_vendas.sql` carregada no schema `public`.
+2. **Execução dos Scripts:** Com a base `base_projeto_vendas.sql` ativa, execute os arquivos da pasta `/sql` na ordem numérica:
+   - `sql/01_schema_setup.sql`: Cria o schema e as tabelas vazias.
+   - `sql/02_populate_dims.sql`: Processa e popula as tabelas de Dimensão.
+   - `sql/03_load_fact.sql`: Executa a lógica de negócio e popula a tabela Fato.
+3. **Validação:** Utilize o arquivo `sql/04_analises_exploratorias.sql` para validar se os dados foram carregados corretamente e extrair os primeiros insights.
