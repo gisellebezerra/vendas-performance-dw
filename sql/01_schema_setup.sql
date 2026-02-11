@@ -1,5 +1,5 @@
 -- ==========================================================
--- PROJETO: Northwind Data Warehouse
+-- PROJETO: Data Warehouse
 -- OBJETIVO: Criação das tabelas (Dimensões e Fato)
 -- ARQUITETURA: Star Schema
 -- ==========================================================
