@@ -68,4 +68,4 @@ CREATE TABLE data_warehouse.fato_venda (
     data_enviado DATE
 );
 
--- Comentário técnico: O uso de NUMERIC(18,2) garante precisão absoluta para cálculos financeiros.
+-- O uso de NUMERIC(18,2) garante precisão absoluta para cálculos financeiros.
